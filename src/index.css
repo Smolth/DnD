@@ -857,10 +857,19 @@ img {
   gap: 1rem;
 }
 
+.rules-sections table{
+  font-family: var(--font-display);
+}
+
 .panel--compact td {
   text-align: center;
   padding: 1% 80px;
   border: #8e7a2a solid 2px;
+}
+
+.panel--compact thead {
+  font-weight: 600;
+  color: var(--accent);
 }
 
 @media (max-width: 500px) {

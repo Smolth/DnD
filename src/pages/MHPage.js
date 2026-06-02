@@ -3,7 +3,7 @@ import { useMasterCharacters } from '../context';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 export default function MPPage() {
-    const { masterCharacters: mp, getMasterCharacterByClass, getMasterCharacterByRole } = useMasterCharacters();
+    const { masterCharacters: mp, getMasterCharacterByClass, getMasterCharacterByRole, getMasterCharacterByName } = useMasterCharacters();
     const [search, setSearch] = useState('');
     const [characterList, setCharacterList] = useState(mp)
 
@@ -20,13 +20,17 @@ export default function MPPage() {
     const getByClass = (e) => {
         let stroke = e.target.value.trim();
          if (stroke === '') {
-            setSearch(stroke);
+            setSearch('');
             setCharacterList(mp)
             return
         }
-        stroke = stroke[0]?.toUpperCase() + stroke?.slice(1)?.toLowerCase();
+        let newStroke = stroke[0]?.toUpperCase() + stroke?.slice(1)?.toLowerCase();
+        const charList1 = getMasterCharacterByClass(newStroke);
+        const charList2 = getMasterCharacterByName(stroke);
+        const charList3 = getMasterCharacterByName(newStroke);
+        const charList = [...new Set([...charList1, ...charList2, ...charList3])]
+
         setSearch(stroke);
-        const charList = getMasterCharacterByClass(stroke);
         setCharacterList(charList);
     }
     const getAllChars = useCallback(() => {
@@ -42,7 +46,7 @@ export default function MPPage() {
             <div className='search'>
                 <button id='goodchars' onClick={getGuildChars}>Вывести членов гильдии</button>
                 <button id='badchars' onClick={getBadChars}>Вывести антогонистов</button>
-                <input placeholder='Поиск по классу' value={search} onChange={(e) => getByClass(e)} />
+                <input placeholder='Поиск по имени или классу...' value={search} onChange={(e) => getByClass(e)} />
                 <span onClick={getAllChars}>x</span>
             </div>
             <ul className="heros-grid">

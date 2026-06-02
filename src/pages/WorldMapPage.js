@@ -24,7 +24,7 @@ export default function WorldMapPage() {
         <ol className="regions-list">
           {worldMap.buildings.map((r) => (
             <li key={r.id}>
-              <strong>{r.name}</strong> — {r.address} - {r.description}
+              <strong>{r.name}</strong> {'(' + r.open+ ')'} — {r.description}
             </li>
           ))}
         </ol>

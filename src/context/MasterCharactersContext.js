@@ -860,7 +860,7 @@ export function MasterCharactersProvider({ children }) {
       },
       {
         id: 'guardian-barrington',
-        name: 'Личный Страж Баррингтон',
+        name: 'Личные стражи Баррингтон',
         role: 'Приставлены охранять леди',
         age: '?',
         lg: "Общий",
@@ -868,7 +868,7 @@ export function MasterCharactersProvider({ children }) {
         bonus: "+2",
         perception: 11,
         class: "Воин",
-        portrait: portraitPath('guardian-barrington.jpg'),
+        portrait: portraitPath('guardian-barrington.png'),
         appearance:
           'Затянутые в черные одежды и носящие кольчужные шлемы женщины.',
         description:
@@ -1035,6 +1035,8 @@ export function MasterCharactersProvider({ children }) {
         normalizedMasterCharacters.filter((c) => c.class.includes(name)),
       getMasterCharacterByRole: (role) =>
         normalizedMasterCharacters.filter((c) => c.role.includes(role)),
+      getMasterCharacterByName: (name) =>
+        normalizedMasterCharacters.filter((c) => c.name.includes(name)),
     };
   }, []);
 
