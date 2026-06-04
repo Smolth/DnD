@@ -1020,6 +1020,23 @@ export function MasterCharactersProvider({ children }) {
         skills: { Атлетика: "+2", Запугивание: "+2" },
         alignment: "Хаотично-нейтральное"
       },
+      {
+        id: 'sale-ship',
+        name: 'Экипаж торгового судна',
+        role: 'Торговое судно в Шарском море, едет в Линтер',
+        age: '?',
+        lg: "Общий",
+        level: 1,
+        bonus: "+2",
+        perception: 10,
+        class: "?",
+        portrait: artPath('sale-ship.jpg'),
+        appearance:
+          'Экипаж состоит из 10 человек во главе со штурманом Тобом. Все одеты в морские рубахи и кепки, защищающие от палящего солнца.',
+        description:
+          'Они могут подсказать, куда ехать.',
+        stats: { strength: 10, dexterity: 10, constitution: 10, intelligence: 12, wisdom: 14, charisma: 10, speed: 30, hits: 10, armor: 10 },
+      },
     ];
 
     const normalizedMasterCharacters = masterCharacters.map((character) => ({

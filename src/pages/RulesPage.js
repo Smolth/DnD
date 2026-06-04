@@ -93,7 +93,7 @@ export default function RulesPage() {
               </tr>
             </tbody>
           </table>
-          <h2 style={{marginTop: "2%"}}>ЕДА, НАПИТКИ И ПРОСТОЙ</h2>
+          <h2 style={{ marginTop: "2%" }}>ЕДА, НАПИТКИ И ПРОСТОЙ</h2>
           <table>
             <thead>
               <td>Пункт</td>
@@ -194,7 +194,7 @@ export default function RulesPage() {
               </tr>
             </tbody>
           </table>
-          <h2 style={{marginTop: "2%"}}>УСЛУГИ</h2>
+          <h2 style={{ marginTop: "2%" }}>УСЛУГИ</h2>
           <table>
             <thead>
               <td>Услуга</td>
@@ -295,7 +295,7 @@ export default function RulesPage() {
               </tr>
             </tbody>
           </table>
-          <h2 style={{marginTop: "2%"}}>ТРЕБОВАНИЯ К ЕДЕ И ВОДЕ</h2>
+          <h2 style={{ marginTop: "2%" }}>ТРЕБОВАНИЯ К ЕДЕ И ВОДЕ</h2>
           <table>
             <thead>
               <td>Размер существа</td>
@@ -332,6 +332,49 @@ export default function RulesPage() {
                 <td>Громадное</td>
                 <td>64 фунта</td>
                 <td>64 галлона</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section key='длины' className="panel panel--compact">
+          <h2>МЕРЫ ИЗМЕРЕНИЯ</h2>
+          <table>
+            <thead>
+              <td>Мера</td>
+              <td>Единицы измерения</td>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Дюйм</td>
+                <td>2,5 см</td>
+              </tr>
+              <tr>
+                <td>Фут</td>
+                <td>30 см</td>
+              </tr>
+              <tr>
+                <td>Аршин</td>
+                <td>71 см</td>
+              </tr>
+              <tr>
+                <td>Верста</td>
+                <td>1,066 км</td>
+              </tr>
+              <tr>
+                <td>Миля</td>
+                <td>1,85 км</td>
+              </tr>
+              <tr>
+                <td>Морская Миля</td>
+                <td>1,61 км</td>
+              </tr>
+              <tr>
+                <td>Фунт</td>
+                <td>454 г</td>
+              </tr>
+              <tr>
+                <td>Унция</td>
+                <td>29,86 г</td>
               </tr>
             </tbody>
           </table>

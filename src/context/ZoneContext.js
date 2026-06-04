@@ -71,7 +71,7 @@ export function ZonesProvider({ children }) {
                 name: 'Артенский порт',
                 type: 'Район',
                 image:
-                     mapPath('port.png'),
+                    mapPath('port.png'),
                 description:
                     'Сюда искатели приключений приходят переместиться или получить информацию о перемещениях.',
 
@@ -206,7 +206,46 @@ export function ZonesProvider({ children }) {
                     'Небольшое судно, преодолевающее Шарское море, принадлежит штурману Цириху.',
 
             },
-          
+            {
+                id: 'darina',
+                name: 'Дарина',
+                type: 'Город',
+                image:
+                    mapPath('darina.png'),
+                description:
+                    'Небольшой портовый городок на землях графа Полена.',
+
+            },
+               {
+                id: 'trey',
+                name: 'Трэй',
+                type: 'Город',
+                image:
+                    mapPath('trey.png'),
+                description:
+                    'Транспортный узел королевства.',
+
+            },
+            {
+                id: 'ulir-forest',
+                name: 'Улирийская пустошь (бывш. лес)',
+                type: 'Пустошь',
+                image:
+                    mapPath('ulir-forest.jpeg'),
+                description:
+                    'Пустошь, образовавшаяся в результате сожжения леса эльфов, находится в 2 км от города Улир.',
+
+            },
+            {
+                id: 'ulir',
+                name: 'Улир',
+                type: 'Город',
+                image:
+                    mapPath('ulir.jpg'),
+                description:
+                    'Город на пересечении железных путей - Улир.',
+
+            },
         ]
 
         return {
