@@ -1,11 +1,32 @@
 import { Link, useParams } from 'react-router-dom';
-import { useScenarios } from '../context';
+import { useScenarios, useZones } from '../context';
 import ScenarioNpcList from '../components/scenario/ScenarioNpcList';
+import { useState } from 'react';
 
 export default function ScenarioPage() {
   const { slug } = useParams();
   const { getScenarioBySlug } = useScenarios();
-  const scenario = getScenarioBySlug(slug);
+  const { getZoneByName } = useZones()
+  let scenario = getScenarioBySlug(slug);
+  const [newText, setNewText] = useState(false);
+  const [newAction, setNewAction] = useState('');
+  const localScenario = localStorage.getItem(scenario.id);
+  if (localScenario) {
+    scenario = JSON.parse(localScenario);
+  }
+
+  function addAction(scene) {
+    setNewText(!newText);
+    if (newAction.length > 0) {
+      saveAction(scene);
+      localStorage.setItem(scenario.id, JSON.stringify(scenario));
+    }
+    setNewAction('');
+  }
+
+  function saveAction(sc) {
+    sc.actions.push(newAction);
+  }
 
   if (!scenario) {
     return (
@@ -17,7 +38,7 @@ export default function ScenarioPage() {
   }
 
   const sortedScenes = [...scenario.scenes].sort((a, b) => a.order - b.order);
-  console.log(sortedScenes)
+  //console.log(sortedScenes)
 
   return (
     <div className="page scenario-page">
@@ -42,7 +63,9 @@ export default function ScenarioPage() {
                 <span className="scene-item__order">Сцена {scene.order}</span>
                 <h3>{scene.title}</h3>
               </div>
-              <p className="scene-item__desc">{scene.zone}</p>
+              <Link to={"/world-map/zone-" + getZoneByName(scene.zone)?.id}>
+                <i className="scene-item__desc">{scene.zone}</i>
+              </Link>
               <p className="scene-item__desc">{scene.description}</p>
               {scene.dialogues?.length > 0 && (
                 <div className="dialogues">
@@ -55,6 +78,28 @@ export default function ScenarioPage() {
                   ))}
                 </div>
               )}
+              {
+                <article className="dialogues">
+                  <h4>Действия игроков</h4>
+                  <div className="player-actions">
+                    {scene.actions.map((d, i) => (
+                      <p key={i} className="scene-item__desc">
+                        {d}
+                      </p>
+                    ))}
+                  </div>
+                  <div className='actions'>
+                    {newText ?
+                      <input value={newAction} onChange={(e) => setNewAction(e.target.value.trim())} className='new-action action-border' type='textarea' /> :
+                      <div className='new-action'></div>
+                    }
+                    <button onClick={() => addAction(scene)} className='add-button'>
+                      {!newText && <span>+</span>}
+                      <span>Записать</span>
+                    </button>
+                  </div>
+                </article>
+              }
             </li>
           ))}
         </ol>

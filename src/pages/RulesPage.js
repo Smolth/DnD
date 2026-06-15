@@ -23,6 +23,83 @@ export default function RulesPage() {
             </ul>
           </section>
         ))}
+        <section key='существование' className="panel panel--compact">
+          <h2>Навыки</h2>
+          <table>
+            <thead>
+              <td>Характеристика</td>
+              <td>Навык</td>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Телосложение</td>
+                <td>Атлетика</td>
+              </tr>
+              <tr>
+                <td>Сила</td>
+                <td>Атлетика</td>
+              </tr>
+              <tr>
+                <td rowSpan={3}>Ловкость</td>
+                <td>Акробатика</td>
+              </tr>
+              <tr>
+                <td>Ловкость рук</td>
+              </tr>
+              <tr>
+                <td>Скрытность</td>
+              </tr>
+              <tr>
+                <td rowSpan={5}>Интеллект</td>
+                <td>Магия</td>
+              </tr>
+              <tr>
+                <td>История</td>
+              </tr>
+              <tr>
+                <td>Анализ</td>
+              </tr>
+              <tr>
+                <td>Природа</td>
+              </tr>
+              <tr>
+                <td>Религия</td>
+              </tr>
+               <tr>
+                <td rowSpan={6}>Мудрость</td>
+                <td>Проницательность</td>
+              </tr>
+              <tr>
+                <td>Уход за животными</td>
+              </tr>
+              <tr>
+                <td>Медицина</td>
+              </tr>
+              <tr>
+                <td>Религия</td>
+              </tr>
+              <tr>
+                <td>Выживание</td>
+              </tr>
+              <tr>
+                <td>Внимательность</td>
+              </tr>
+              <tr>
+                <td rowSpan={4}>Харизма</td>
+                <td>Обман</td>
+              </tr>
+               <tr>
+                <td>Запугивание</td>
+              </tr>
+              <tr>
+                <td>Убеждение</td>
+              </tr>
+              <tr>
+                <td>Выступление</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
         <section key='доспех' className="panel panel--compact">
           <h2>НАДЕВАНИЕ И СНЯТИЕ ДОСПЕХА</h2>
           <table>
@@ -375,6 +452,37 @@ export default function RulesPage() {
               <tr>
                 <td>Унция</td>
                 <td>29,86 г</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section key='сокровища' className="panel panel--compact">
+          <h2>ИНДИВИДУАЛЬНЫЕ СОКРОВИЩА: ПОКАЗАТЕЛЬ ОПАСНОСТИ 0–4</h2>
+          <table>
+            <thead>
+              <td>к100</td>
+              <td>Награда</td>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1-30</td>
+                <td>5к6 (17) мм</td>
+              </tr>
+              <tr>
+                <td>31-60</td>
+                <td>4к6 (14) см</td>
+              </tr>
+              <tr>
+                <td>61-70</td>
+                <td>3к6 (10) эм</td>
+              </tr>
+              <tr>
+                <td>71-95</td>
+                <td>3к6 (10) зм</td>
+              </tr>
+              <tr>
+                <td>96-100</td>
+                <td>1к6 (3) пм</td>
               </tr>
             </tbody>
           </table>

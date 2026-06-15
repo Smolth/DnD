@@ -9,14 +9,16 @@ import { ZonesProvider } from '../context/ZoneContext';
 
 export function ScenariosRoute({ children }) {
   return <ScenariosProvider>
-    <ZonesProvider>{children}</ZonesProvider>
+    {children}
   </ScenariosProvider>;
 }
 
 export function ScenarioDetailRoute({ children }) {
   return (
     <ScenariosProvider>
-      <MasterCharactersProvider>{children}</MasterCharactersProvider>
+      <ZonesProvider>
+        <MasterCharactersProvider>{children}</MasterCharactersProvider>
+      </ZonesProvider>
     </ScenariosProvider>
   );
 }

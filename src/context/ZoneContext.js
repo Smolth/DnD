@@ -81,7 +81,7 @@ export function ZonesProvider({ children }) {
                 name: 'Городская площадь',
                 type: 'Район',
                 image:
-                    'https://images.unsplash.com/photo-1518709268805-4e9042af9f48?w=600&h=400&fit=crop',
+                    mapPath('square.png'),
                 description:
                     'Здесь можно прогуляться.',
 
@@ -91,7 +91,7 @@ export function ZonesProvider({ children }) {
                 name: 'Главный пропускной пункт',
                 type: 'Здание',
                 image:
-                    'https://images.unsplash.com/photo-1518709268805-4e9042af9f48?w=600&h=400&fit=crop',
+                    mapPath('checkpoint.jpg'),
                 description:
                     'Место проверки посетителей города у главного входа в город.',
 
@@ -181,7 +181,7 @@ export function ZonesProvider({ children }) {
                 name: 'Ортенский лес',
                 type: 'Лес',
                 image:
-                    mapPath('forest.png'),
+                    mapPath('forest.jpeg'),
                 description:
                     'Местный густой лес с хвойными и лиственными деревьями. Проверки Мудрости (Выживание) для навигации. Здесь появился опасный Гризли.',
 
@@ -216,7 +216,7 @@ export function ZonesProvider({ children }) {
                     'Небольшой портовый городок на землях графа Полена.',
 
             },
-               {
+            {
                 id: 'trey',
                 name: 'Трэй',
                 type: 'Город',
@@ -224,6 +224,16 @@ export function ZonesProvider({ children }) {
                     mapPath('trey.png'),
                 description:
                     'Транспортный узел королевства.',
+
+            },
+            {
+                id: 'ternitca',
+                name: 'Терница',
+                type: 'Город',
+                image:
+                    mapPath('ternitca.jpg'),
+                description:
+                    'Небольшой городок, собирающий в себе обывателей разных рас.',
 
             },
             {
@@ -241,10 +251,36 @@ export function ZonesProvider({ children }) {
                 name: 'Улир',
                 type: 'Город',
                 image:
-                    mapPath('ulir.jpg'),
+                    mapPath('ulir.png'),
                 description:
                     'Город на пересечении железных путей - Улир.',
-
+            },
+            {
+                id: 'shatro',
+                name: 'Шатро',
+                type: 'Город',
+                image:
+                    mapPath('shatro.jpg'),
+                description:
+                    'Бывший сожжёным город Сатиров.',
+            },
+            {
+                id: 'martok-guild',
+                name: 'Гильдия «Марток»',
+                type: 'Здание',
+                image:
+                    mapPath('ulir.png'),
+                description:
+                    'Гильдия в Улире.',
+            },
+            {
+                id: 'sword-guild',
+                name: 'Гильдия «Бирюзовый меч»',
+                type: 'Здание',
+                image:
+                    mapPath('sword.png'),
+                description:
+                    'Гильдия в Тернице.',
             },
         ]
 

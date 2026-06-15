@@ -406,7 +406,7 @@ img {
   padding: 1.25rem;
   background: var(--bg-elevated);
   border-radius: var(--radius);
-  border-left: 3px solid var(--accent);
+  border: 3px solid var(--accent);
 }
 
 .scene-item__head {
@@ -419,7 +419,7 @@ img {
 
 .scene-item__order {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -433,14 +433,12 @@ img {
 }
 
 .scene-item__desc {
-  margin: 0 0 0.75rem;
   color: var(--text-muted);
 }
 
 .dialogues h4 {
   font-size: 0.9rem;
-  margin: 0 0 0.5rem;
-  color: var(--text-muted);
+  margin-bottom: 0rem;
   font-weight: 600;
 }
 
@@ -450,6 +448,15 @@ img {
   background: var(--bg-deep);
   border-radius: var(--radius);
   border: none;
+}
+
+.player-actions {
+  border-top: solid 1px var(--text);
+  margin: 0
+}
+
+.player-actions p {
+  margin: 0
 }
 
 .dialogue cite {
@@ -463,6 +470,43 @@ img {
 
 .dialogue p {
   margin: 0;
+}
+
+.actions {
+  margin-top: 1%;
+  display: flex;
+}
+
+.add-button {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  width: 10%;
+  background: none;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 1%;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.add-button:hover {
+  background-color: var(--accent-dim);
+  border-color: var(--text);
+}
+
+.new-action {
+  width: 80%;
+  margin-right: 5%;
+  margin-left: 5%;
+  background: none;
+  color: var(--text);
+  padding: 1%;
+}
+
+.action-border {
+  border: 1px solid var(--accent);
 }
 
 /* NPC grid */
@@ -852,12 +896,65 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.map-marker {
+  position: absolute;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.marker-dot {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding-top: 3px;
+  font-family: var(--font-display);
+  font-size: 0.9em;
+  /* background-color: var(--accent);
+  border: 2px solid white; */
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.marker-label {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
+  background: var(--bg-elevated);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-family: inherit;
+}
+
+.map-marker:hover .marker-label {
+  opacity: 1;
+}
+
+.map-marker:hover .marker-dot {
+  transform: scale(1.2);
+  /* background-color: white;
+  border-color: var(--accent-dim); */
+  background-color: var(--accent);
+  border: 2px solid white;
+}
+
+/* Rules */
 .rules-sections {
   display: grid;
   gap: 1rem;
 }
 
-.rules-sections table{
+.rules-sections table {
   font-family: var(--font-display);
 }
 

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 const navItems = [
   { to: '/', label: 'Главная', end: true },
   { to: '/npc', label: 'МП'},
-  { to: '/world-map', label: 'Карта мира' },
+  { to: '/world-map/world-map-page', label: 'Карта мира' },
   { to: '/rules', label: 'Правила' },
   { to: '/players', label: 'Игроки' },
 ];
