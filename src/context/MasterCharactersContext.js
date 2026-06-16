@@ -513,8 +513,8 @@ export function MasterCharactersProvider({ children }) {
           'Невозмутим в любой ситуации',
           'Леди, которую он безпамятно любил, бросила его и уехала с другим мужчиной',
         ],
-        stats: { strength: 12, dexterity: 14, constitution: 10, intelligence: 10, wisdom: 8, charisma: 13, speed: 30, hits: 10, armor: 10 },
-        attack: ["Кинжал. Рукопашная атака оружием: +2 к попаданию, досягаемость 5 футов, одна цель. Попадание: Колющий урон 1к4"],
+        stats: { strength: 12, dexterity: 14, constitution: 10, intelligence: 10, wisdom: 8, charisma: 13, speed: 30, hits: 10, armor: 11 },
+        attack: ["Кинжал. Рукопашная атака оружием: +2 к попаданию, досягаемость 5 футов, одна цель. Попадание: Колющий урон 1к4 + 1"],
         skills: {},
         alignment: "Нейтрально-злое"
       },
@@ -548,10 +548,10 @@ export function MasterCharactersProvider({ children }) {
         name: 'Наёмник',
         role: 'Похититель',
         age: '?',
-        lg: "Общий",
+        lg: "Общий, Албайский",
         level: 1,
         bonus: "+2",
-        perception: 11,
+        perception: 16,
         class: "Злодей",
         portrait: portraitPath('mercenary.jpg'),
         appearance:
@@ -563,11 +563,13 @@ export function MasterCharactersProvider({ children }) {
           'Двигаются бесшумно',
           'Были изгнаны из родного города за контрабанду',
         ],
-        stats: { strength: 12, dexterity: 15, constitution: 10, intelligence: 10, wisdom: 12, charisma: 14, speed: 30, hits: 20, armor: 12 },
-        attack: ["Короткий меч. Рукопашная атака оружием: +4 к попаданию, досягаемость 5 футов, одна цель. Попадание: 5 (1к6 + 2) колющего урона.",
+        stats: { strength: 14, dexterity: 15, constitution: 12, intelligence: 10, wisdom: 12, charisma: 14, speed: 30, hits: 27, armor: 12 },
+        attack: [
+          "Мультиатака. Шпион совершает две рукопашные атаки.",
+          "Короткий меч. Рукопашная атака оружием: +4 к попаданию, досягаемость 5 футов, одна цель. Попадание: 5 (1к6 + 2) колющего урона.",
           "Ручной арбалет. Дальнобойная атака оружием: +4 к попаданию, дистанция 30/120 футов, одна цель. Попадание: 5 (1к6 + 2) колющего урона."
         ],
-        skills: { Восприятие: "+6", "Ловкость рук": "+4", Скрытность: "+4" },
+        skills: { Восприятие: "+6", "Ловкость рук": "+4", Скрытность: "+4", Обман: "+5", "Хитрое действие": "В каждый свой ход наёмник может бонусным действием выполнить действие «Рывок», «Отход» или «Засада»." },
         alignment: "Хаотично-нейтральное"
       },
       {
@@ -710,7 +712,7 @@ export function MasterCharactersProvider({ children }) {
         role: 'Пробуждённый бурый медведь',
         age: '?',
         lg: "Общий",
-        level: 1,
+        level: 2,
         bonus: "+2",
         perception: 13,
         class: "Злодей",
@@ -720,7 +722,7 @@ export function MasterCharactersProvider({ children }) {
         description:
           'Охраняет в лесу медвежат, потому прогоняет всех из леса. На самом деле самка.',
         features: ["Тонкий нюх. Медведь совершает с преимуществом проверки Мудрости (Восприятие), полагающиеся на обоняние."],
-        stats: { strength: 19, dexterity: 10, constitution: 16, intelligence: 10, wisdom: 13, charisma: 7, speed: 40, hits: 34, armor: 11 },
+        stats: { strength: 19, dexterity: 10, constitution: 16, intelligence: 10, wisdom: 13, charisma: 7, speed: 40, hits: 68, armor: 11 },
         attack: ["Мультиатака. Медведь совершает две атаки: одну укусом, и одну когтями.",
           "Укус. Рукопашная атака оружием: +6 к попаданию, досягаемость 5 футов, одна цель. Попадание: Колющий урон 8 (1к8 + 4).",
           "Когти. Рукопашная атака оружием: +6 к попаданию, досягаемость 5 футов, одна цель. Попадание: Рубящий урон 11 (2к6 + 4)."
@@ -1151,18 +1153,18 @@ export function MasterCharactersProvider({ children }) {
         bonus: "+2",
         perception: 10,
         class: "Маг",
-        portrait: portraitPath('cameron.webp'),
+        portrait: portraitPath('cameron.png'),
         appearance:
-          'Угрюмый, с длинными темно-фиолетовыми волосами, которые наполовину скрывают его лицо. Карие глаза подведены черными линиями. Уголки губ опущены вниз, но по нему видно, что в любой момент его выражение лица может резко измениться.',
+          'Белобрысый мужчина с плотным телосложением. Глаза - голубые, ухмыляющиеся. На нём голубая в полосочку рубаха с растегнутым воротом и мешковатые штаны коричневого цвета.',
         description:
-          'Активист гильдии. Улыбающийся детина, с огромными ушами.',
+          'Активист гильдии. Улыбающийся детина, с огромными ушами. Легко общается с любыми людьми. Входит в совет гильдии «Бирюзовый меч».',
         features: [
-          'Мрачный',
-          'Переменчивый',
-          'Не любит угрозы',
+          'Весельчак',
+          'Настойчивый',
+          'Страшен в гневе',
         ],
-        stats: { strength: 10, dexterity: 14, constitution: 12, intelligence: 14, wisdom: 12, charisma: 14, speed: 30, hits: 20, armor: 12 },
-        skills: { Харизма: "+2", Обман: "+3" }
+        stats: { strength: 15, dexterity: 12, constitution: 14, intelligence: 10, wisdom: 10, charisma: 13, speed: 30, hits: 20, armor: 12 },
+        skills: { Харизма: "+2", Сила: "+3", Атлетика: "+2" }
       },
     ];
 
