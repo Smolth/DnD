@@ -10,7 +10,6 @@ export default function ScenarioCard({ scenario }) {
         <div className="scenario-card__body">
           <h2 className="scenario-card__title">{scenario.title}</h2>
           <p className="scenario-card__desc">{scenario.shortDescription}</p>
-          <span className="scenario-card__cta">Открыть сценарий →</span>
         </div>
       </Link>
     </article>
